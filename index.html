@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("task-1");
+        let a=2345;
+        console.log(a)
+        let str=String(a);
+        min=str[0];
+        max=str[0];
+        minindex=0;
+        maxindex=0;
+        for(i of str){
+            if(min>str[i]){
+                min=str[i]
+                minindex=i
+            }
+            if(max<str[i]){
+                max=str[i]
+                maxindex=i
+            }
+        }
+        if(minindex<maxindex){
+            console.log("minimum is first");
+        }
+        else{
+            console.log("maximum is first");
+        }
+        console.log("task-2");        
+        function generateotp(){
+            let digits= '0123456789';
+            let otp = '' ;
+            let len=digits.length;
+            for(i=0;i<4;i++){
+                otp+=digits[Math.floor(Math.random()*len)]
+                
+            }
+            return otp;
+
+        }
+        console.log("random otp's",generateotp());
+        
+    </script>
+</body>
+</html>
